@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 20px 25px 15px  3px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    li {
+      background-color: #e8e8e8;
+      padding: 8px 10px;
+      margin-bottom: 6px;
+      border-radius: 6px;
+    }
+
+   .taskcontainer {
+ 
+  background-color: #f9f9f9;
+  border-left: 5px solid #4caf50;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.taskcontainer:hover {
+  transform: scale(1.02);
+  background-color: #f1f1f1;
+}
+
+.taskcontainer p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-transform: capitalize; 
+
+}
+
+.taskcontainer h2 {
+  margin: 4px 0 0;
+  font-size: 12px;
+    text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 600;
+ 
+}
+.task-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+
+ .editcontainer {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  background-color: #f9f9f9;
+  border-left: 5px solid #4caf50;
+  padding: 16px;
+  margin: 12px 0;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.editcontainer:hover {
+  transform: scale(1.02);
+  background-color: #f1f1f1;
+}
+
+.editcontainer p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-transform: capitalize; 
+
+}
+
+.editcontainer h2 {
+  margin: 4px 0 0;
+  font-size: 12px;
+    text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 600;
+ 
+}
