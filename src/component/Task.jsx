@@ -13,25 +13,21 @@ function Task({ tasks, handleTodo }) {
 
   return (
     <div>
-      {open ? (
-        tasks.map((todos, index) => (
-          <div key={index} className="taskcontainer">
-            <p> Title : {todos.title}</p>
-            <h2> Description : {todos.description}</h2>
-            <div>
-              {" "}
-              <button onClick={() => handleChange(todos)}>edit</button>
-            </div>
-            <div>
-              <button className="task-button" onClick={() => handleTodo(todos)}>
-                Mark as Done
-              </button>
-            </div>
+      {tasks.map((todos, index) => (
+        <div key={index} className="taskcontainer">
+          <p> Title : {todos.title}</p>
+          <h2> Description : {todos.description}</h2>
+          <div>
+            {" "}
+            <button onClick={() => handleChange(todos)}>edit</button>
           </div>
-        ))
-      ) : (
-        <Edit update={update} />
-      )}
+          <div>
+            <button className="task-button" onClick={() => handleTodo(todos)}>
+              Mark as Done
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

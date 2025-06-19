@@ -17,8 +17,6 @@ function Edit({ update }) {
           "content-type": "application/json",
         },
       }
-      
-
     );
     const data = await Change.json();
     console.log(data);
