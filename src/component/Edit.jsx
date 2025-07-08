@@ -6,13 +6,11 @@ function Task({ tasks, handleTodo }) {
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
   const { setTasks } = useMyContext();
-
   const startEdit = (task, index) => {
     setEditIndex(index);
     setEditTitle(task.title);
     setEditDescription(task.description);
   };
-
   const submitEdit = async (task) => {
     try {
       const res = await fetch(
@@ -29,11 +27,8 @@ function Task({ tasks, handleTodo }) {
           }),
         }
       );
-
       const data = await res.json();
-
       if (data.success) {
-        // Replace updated task in the list
         setTasks((prev) =>
           prev.map((item) =>
             item._id === task._id ? { ...item, ...data.data } : item
@@ -48,7 +43,6 @@ function Task({ tasks, handleTodo }) {
       alert("Something went wrong.");
     }
   };
-
   return (
     <div className="space-y-4 pt-6">
       {tasks.map((task, index) => (
@@ -72,7 +66,7 @@ function Task({ tasks, handleTodo }) {
               />
               <div className="flex justify-end gap-2">
                 <button
-                  onClick={() => submitEdit(task)} // ✅ Fix here
+                  onClick={() => submitEdit(task)}
                   className="px-4 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded"
                 >
                   Save
@@ -97,14 +91,12 @@ function Task({ tasks, handleTodo }) {
               <div className="flex justify-end gap-2">
                 <button
                   onClick={() => startEdit(task, index)}
-                  className="px-4 py-1 bg-yellow-400 hover:bg-yellow-500 text-white text-sm font-medium rounded-md transition duration-300"
-                >
+                  className="px-4 py-1 bg-yellow-400 hover:bg-yellow-500 text-white text-sm font-medium rounded-md transition duration-300">
                   Edit
                 </button>
                 <button
                   onClick={() => handleTodo(task)}
-                  className="px-4 py-1 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-md transition duration-300"
-                >
+                  className="px-4 py-1 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-md transition duration-300">
                   Mark as Done
                 </button>
               </div>
@@ -115,5 +107,4 @@ function Task({ tasks, handleTodo }) {
     </div>
   );
 }
-
 export default Task;

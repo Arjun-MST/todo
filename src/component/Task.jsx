@@ -32,7 +32,7 @@ function Task({ tasks, handleTodo }) {
     );
     const data = await Change.json();
     setTasks((prev) => [...prev, data?.data]);
-    setEditIndex(null); // close edit
+    setEditIndex(null);
   };
 
   return (
@@ -77,7 +77,7 @@ function Task({ tasks, handleTodo }) {
                 <span className="text-purple-600">Title:</span> {task.title}
               </p>
               <p className="text-sm text-gray-600 mb-4">
-                <span className="text-purple-600">Description:</span>{" "}
+                <span className="text-purple-600">Description:</span>
                 {task.description}
               </p>
               <div className="flex justify-end gap-2">

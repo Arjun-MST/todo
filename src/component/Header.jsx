@@ -7,6 +7,7 @@ function Header() {
       <nav style={styles.nav}>
         <Link to ="/" >home</Link>
         <Link to="/people" style={styles.link}>People</Link>
+        <Link to="/fackebook-login" style={styles.link}>fackebook</Link>
       </nav>
     </header>
   );

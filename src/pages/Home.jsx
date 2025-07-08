@@ -10,7 +10,6 @@ function Home() {
   useEffect(() => {
     fetchTodo();
   }, []);
-
   const handleChange = async () => {
     const response = await fetch("https://api.freeapi.app/api/v1/todos/", {
       method: "POST",
@@ -24,7 +23,6 @@ function Home() {
       },
     });
     const data = await response.json();
-
     setTasks((prev) => [...prev, data?.data]);
     setInput(" ");
     setDescription(" ");
